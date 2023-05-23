@@ -842,8 +842,7 @@ button {
 .sub-input {
   padding: 8px 16px;
   width: 398px;
-
-  height: 40px;
+    height: 40px;
   border: 1px solid var(--color-white);
   border-radius: 4px;
   color: var(--color-white);
@@ -861,6 +860,11 @@ button {
     width: 264px;
     margin-bottom: 0;
     margin-right: 24px;
+  }
+}
+@media only screen and (max-width: 397px) {
+  .sub-input {
+    width: 100%;
   }
 }
 
