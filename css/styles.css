@@ -613,7 +613,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   flex-basis: calc((100%-16px) / 2);
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: center;
   border: 1px solid var(--color-light-slate);
   border-radius: 4px;
@@ -675,12 +675,11 @@ button {
 }
 @media only screen and (min-width: 1158px) {
   .footer-container {
-   padding: 0 15px;
+    padding: 0 15px;
     flex-wrap: nowrap;
     column-gap: 0;
   }
 }
-
 
 @media only screen and (min-width: 1158px) {
   .footer-container {
@@ -814,7 +813,6 @@ button {
 } */
 .subscribe-label {
   display: flex;
-  
 
   justify-content: center;
   align-items: center;
@@ -862,18 +860,18 @@ button {
   color: var(--color-white);
 }
 .sub-btn {
- display: flex;
+  display: flex;
   width: 165px;
   height: 40px;
   padding: 8px 24px;
- margin: 0 auto;
+  margin: 0 auto;
 
   border: none;
- 
+
   color: var(--color-white);
   font-size: 16px;
   line-height: 1.5;
-  
+
   text-align: center;
   letter-spacing: 0.04em;
 
@@ -922,9 +920,9 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
-  min-height: 576px;
-  padding: 72px 24px 24px;
+  width: 392px;
+  min-height: 584px;
+  padding: 72px 16px 24px;
 
   transition: transform 250ms var(--timing-function);
 
@@ -932,6 +930,13 @@ button {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media only screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    padding: 72px 24px 24px;
+  }
 }
 .modal-close-btn {
   position: absolute;
