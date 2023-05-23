@@ -116,9 +116,14 @@ button {
   | Header styles
   |============================
 */
+
+.header{
+  min-width: 320px;
+}
 .header-container {
   display: flex;
   align-items: center;
+  
 }
 @media only screen and (max-width: 768px) {
   .header-container {
@@ -273,6 +278,7 @@ button {
   padding: 122px 0;
   margin: 0 auto;
   max-width: 1440px;
+  min-width: 320px;
   background-position: center;
   background-size: cover;
 }
@@ -494,6 +500,7 @@ button {
 .team {
   background-color: var(--color-cloud);
   max-width: 767px;
+  min-width: 320px;
   padding: 96px 0;
   margin: 0 auto;
 }
@@ -648,6 +655,7 @@ button {
   background-color: var(--color-navy-blue);
   padding: 96px 0;
   max-width: 1440px;
+  min-width: 320px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -1322,7 +1330,12 @@ button {
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
-
+@media only screen and (max-width: 320px) {
+  .menu-container {
+    display: none;
+    
+  }
+}
 .menu-container.is-open {
   transform: translateX(0);
 }
