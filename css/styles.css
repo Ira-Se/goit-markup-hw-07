@@ -117,13 +117,12 @@ button {
   |============================
 */
 
-.header{
+.header {
   min-width: 320px;
 }
 .header-container {
   display: flex;
   align-items: center;
-  
 }
 @media only screen and (max-width: 768px) {
   .header-container {
@@ -154,7 +153,6 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-iris);
- 
 }
 
 @media only screen and (min-width: 756px) {
@@ -447,7 +445,11 @@ button {
   color: var(--color-navy-blue);
   margin-bottom: 8px;
 }
-
+@media only screen and (min-width: 768px) {
+  .features-section-subtitle {
+    text-align: start;
+  }
+}
 @media only screen and (min-width: 1158px) {
   .features-section-subtitle {
     font-weight: 500;
@@ -525,26 +527,19 @@ button {
   display: flex;
   gap: 72px 24px;
   flex-wrap: wrap;
+  justify-content: center;
 }
+
 .team-item {
   background-color: var(--color-white);
   border-radius: 0px 0px 4px 4px;
   display: block;
-  margin: 0 auto;
+
   max-width: 264px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-@media only screen and (min-width: 768px) {
-  .team-item {
-    width: calc((100% - 24px) / 2);
-  }
-}
-@media only screen and (min-width: 1158px) {
-  .team-item {
-    width: calc((100% - 72px) / 4);
-  }
-}
+
 .team-container {
   align-items: center;
 }
@@ -605,7 +600,12 @@ button {
     padding: 120px 0;
   }
 }
-
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .customers-container {
+    max-width: 552px;
+    padding: 0;
+  }
+}
 .customers-list {
   display: flex;
   justify-content: center;
@@ -625,8 +625,7 @@ button {
   height: 88px;
   display: flex;
   flex-wrap: wrap;
-  flex-basis: calc((100%-16px) / 2);
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   border: 1px solid var(--color-light-slate);
   border-radius: 4px;
@@ -683,8 +682,7 @@ button {
 
 @media only screen and (min-width: 768px) {
   .footer-container {
-    padding-left: 108px;
-    justify-content: flex-start;
+    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -778,11 +776,11 @@ button {
   align-items: center;
   gap: 16px;
 }
-@media only screen and (min-width: 1158px) {
+/* @media only screen and (min-width: 1158px) {
   .footer-socials-list {
-    /* margin-right: 80px; */
+    margin-right: 80px;
   }
-}
+} */
 .footer-socials-link {
   display: flex;
   width: 40px;
@@ -813,7 +811,8 @@ button {
     display: flex;
     /* margin-right: auto; */
     padding: 0;
-    min-width: 453px;
+    /* min-width: 453px; */
+    max-width: 100%;
     flex-wrap: nowrap;
   }
 }
@@ -847,8 +846,9 @@ button {
 
 .sub-input {
   padding: 8px 16px;
-  width: 398px;
-    height: 40px;
+  max-width: 398px;
+  width: 100%;
+  height: 40px;
   border: 1px solid var(--color-white);
   border-radius: 4px;
   color: var(--color-white);
@@ -868,11 +868,12 @@ button {
     margin-right: 24px;
   }
 }
-@media only screen and (max-width: 397px) {
+/* @media only screen and (max-width: 397px) {
   .sub-input {
     width: 100%;
+    min-width: 398px;
   }
-}
+} */
 
 .sub-input::placeholder {
   color: var(--color-white);
@@ -883,7 +884,7 @@ button {
   height: 40px;
   padding: 8px 24px;
   margin: 0 auto;
-
+  gap: 16px;
   border: none;
 
   color: var(--color-white);
@@ -939,7 +940,6 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 392px;
-  min-width: 320px;
   min-height: 584px;
   padding: 72px 16px 24px;
 
@@ -949,6 +949,11 @@ button {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media only screen and (max-width: 392px) {
+  .modal {
+    max-width: 100%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1047,11 +1052,7 @@ button {
   outline: none;
   border-color: var(--color-iris);
 }
-@media only screen and (min-width: 320px) and (max-width: 427px) {
-  .modal-form-input {
-    min-width: 320px;
-  }
-}
+
 .modal-form-icon {
   position: absolute;
   top: 50%;
@@ -1337,6 +1338,7 @@ button {
   top: 0;
   left: 0;
   width: 100vw;
+  min-width: 100%;
   height: 100vh;
   padding: 80px 35px 40px 40px;
   background-color: var(--color-white);
@@ -1345,12 +1347,7 @@ button {
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
-@media only screen and (max-width: 320px) {
-  .menu-container {
-    display: none;
-    
-  }
-}
+
 .menu-container.is-open {
   transform: translateX(0);
 }
@@ -1411,4 +1408,9 @@ button {
   display: flex;
   justify-self: flex-start;
   gap: 56px;
+}
+@media only screen and (max-width: 427px) {
+  .mobile-socials-list {
+    gap: 30px;
+  }
 }
