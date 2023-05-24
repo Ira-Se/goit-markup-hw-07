@@ -154,7 +154,13 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-iris);
-  margin-right: 120px;
+ 
+}
+
+@media only screen and (min-width: 756px) {
+  .header-nav-logo {
+    margin-right: 120px;
+  }
 }
 @media only screen and (min-width: 1158px) {
   .header-nav-logo {
@@ -933,6 +939,7 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 392px;
+  min-width: 320px;
   min-height: 584px;
   padding: 72px 16px 24px;
 
@@ -1040,7 +1047,11 @@ button {
   outline: none;
   border-color: var(--color-iris);
 }
-
+@media only screen and (min-width: 320px) and (max-width: 427px) {
+  .modal-form-input {
+    min-width: 320px;
+  }
+}
 .modal-form-icon {
   position: absolute;
   top: 50%;
